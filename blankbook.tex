@@ -1,70 +1,80 @@
-\documentclass{article}
+\documentclass[a5paper]{memoir}
+\usepackage[cm]{fullpage}
 \usepackage{pgffor, ifthen}
 \newcommand{\notes}[3][\empty]{%
-    \noindent Notes\vspace{10pt}\\
+    \noindent \vspace{10pt}\\
     \foreach \n in {1,...,#2}{%
         \ifthenelse{\equal{#1}{\empty}}
             {\rule{#3}{0.5pt}\\}
             {\rule{#3}{0.5pt}\vspace{#1}\\}
         }
 }
+\newcommand{\rosmystery}[1]{%
+      \noindent \huge #1 \par %
+      \vfill %
+      \bigskip %
+      \notes[18pt]{5}{\textwidth}%
+      \par %
+      \eject }
 \begin{document}
 
 The Holy Rosary
 
-\chapter{Joyful Mysteries}
+\section{Joyful Mysteries}
 
-\section{The Annunciation of the Lord to Mary}
+\rosmystery{The Annunciation of the Lord to Mary}
 
-    \notes[18pt]{6}{\textwidth}
+\rosmystery{The Visitation of Mary to Elizabeth}
 
-\section{The Visitation of Mary to Elizabeth}
+\rosmystery{The Nativity of our Lord Jesus Christ}
 
-\section{The Nativity of our Lord Jesus Christ}
+\rosmystery{The Presentation of our Lord}
 
-\section{The Presentation of our Lord}
-
-\notes[22pt]{8}{\textwidth}
-
-\section{Finding Jesus in the Temple at age 12}
+\rosmystery{Finding Jesus in the Temple at age 12}
 
 
-Sorrowful Mysteries
+\section{Sorrowful Mysteries}
 
 
-    The Agony of Jesus in the Garden
-    The Scourging at the Pillar
-    Jesus is Crowned with Thorns
-    Jesus Carried the Cross
-    The Crucifixion of our Lord
+\rosmystery{The Agony of Jesus in the Garden}
 
+\rosmystery{The Scourging at the Pillar}
 
+\rosmystery{Jesus is Crowned with Thorns}
 
-Glorious Mysteries
+\rosmystery{Jesus Carried the Cross}
+
+\rosmystery{The Crucifixion of our Lord}
 
 
 
-    The Resurrection of Jesus Christ
-    The Ascension of Jesus to Heaven
-    The Descent of the Holy Ghost
-    The Assumption of Mary into Heaven
-    Mary is Crowned as Queen of Heaven and Earth
-
-Luminous Mysteries
+\section{Glorious Mysteries}
 
 
 
-    The Baptism in the Jordan
-    The Wedding at Cana
-    The Proclamation of the Kingdom
-    The Transfiguration
-    The Institution of the Eucharist
+\rosmystery{The Resurrection of Jesus Christ}
+
+\rosmystery{The Ascension of Jesus to Heaven}
+
+\rosmystery{The Descent of the Holy Ghost}
+
+\rosmystery{The Assumption of Mary into Heaven}
+
+\rosmystery{Mary is Crowned as Queen of Heaven and Earth}
+
+\section{Luminous Mysteries}
 
 
-\begin{minipage}{0.5\textwidth}
-    \rule{5cm}{5cm}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-    \notes[10pt]{6}{\textwidth}
-\end{minipage}
+
+\rosmystery{The Baptism in the Jordan}
+
+\rosmystery{The Wedding at Cana}
+
+\rosmystery{The Proclamation of the Kingdom}
+
+\rosmystery{The Transfiguration}
+
+\rosmystery{The Institution of the Eucharist}
+
+
 \end{document}

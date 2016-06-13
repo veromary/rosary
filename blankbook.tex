@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{pgffor, ifthen}
+\newcommand{\notes}[3][\empty]{%
+    \noindent Notes\vspace{10pt}\\
+    \foreach \n in {1,...,#2}{%
+        \ifthenelse{\equal{#1}{\empty}}
+            {\rule{#3}{0.5pt}\\}
+            {\rule{#3}{0.5pt}\vspace{#1}\\}
+        }
+}
+\begin{document}
+
+The Holy Rosary
+
+\chapter{Joyful Mysteries}
+
+\section{The Annunciation of the Lord to Mary}
+
+    \notes[18pt]{6}{\textwidth}
+
+\section{The Visitation of Mary to Elizabeth}
+
+\section{The Nativity of our Lord Jesus Christ}
+
+\section{The Presentation of our Lord}
+
+\notes[22pt]{8}{\textwidth}
+
+\section{Finding Jesus in the Temple at age 12}
+
+
+Sorrowful Mysteries
+
+
+    The Agony of Jesus in the Garden
+    The Scourging at the Pillar
+    Jesus is Crowned with Thorns
+    Jesus Carried the Cross
+    The Crucifixion of our Lord
+
+
+
+Glorious Mysteries
+
+
+
+    The Resurrection of Jesus Christ
+    The Ascension of Jesus to Heaven
+    The Descent of the Holy Ghost
+    The Assumption of Mary into Heaven
+    Mary is Crowned as Queen of Heaven and Earth
+
+Luminous Mysteries
+
+
+
+    The Baptism in the Jordan
+    The Wedding at Cana
+    The Proclamation of the Kingdom
+    The Transfiguration
+    The Institution of the Eucharist
+
+
+\begin{minipage}{0.5\textwidth}
+    \rule{5cm}{5cm}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \notes[10pt]{6}{\textwidth}
+\end{minipage}
+\end{document}
